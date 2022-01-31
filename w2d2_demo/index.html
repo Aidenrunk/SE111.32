@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Aiden">
+    <meta name="description" content="W2D2 Demo">
+    <title>W2D2 | Demo</title>
+</head>
+    <!--in document styling in CSS-->
+
+    <style>
+        /*must write with CSS syntax in here*/
+
+        /*SELECTING IN CSS & Javascript: select specific element(s) on a page::
+        *by ELEMENT type    ex: body,div,p
+        *by ID Atributes    ex: wrapper nav footer
+        *by Class Atributes  ex: coming in week 3
+        */
+
+        div {/* applies to all divs in the page */
+
+
+            border:1px solid black;
+            padding:10px; /* adds 10 px of space to all sides inbetween content and the border */
+            margin:5px; /* adds 5 px of space */
+        }
+
+        #Wrapper {
+
+            background-color: white;
+
+        }
+
+        #School {
+
+            background-color: yellow;
+        }
+
+        #Nav, #Footer{
+
+            background-color: rgb(200, 200, 200);
+        }
+
+    </style>
+<body style="background-color:gray">
+    <div id="Wrapper"> <!--this div holds and "wraps around/together" all content on the page-->
+        
+        <h1>Aiden S. Runk</h1>
+
+        <!--Navigation-->
+        <div id="Nav">
+            <!--Once an Id value has been used it cant be used again, like a variable-->
+
+            <!-- Linking to outside pages, they are not apart of the website, they exist somewhre else-->
+            <!--you need the full uniform resource locator / online path-->
+
+            <a href "https://www.meca.edu/" target="_blank">Visit Meca</a>
+            <!--href holds the url of website linking to-->
+
+            <!--linking to internal pages, these are within teh site root directory-->
+            <!--Usually you only need the URI if the folder is set up correctly-->
+            <a href="page2.html" target="_blank">Visit Page 2</a>
+
+            <a href="">Bio</a>
+            <a href="">Schools</a>
+            <a href="">Hobbies</a>
+            <a href="">Bottom of Page</a>
+
+        </div>
+
+        <!--Content / Sections-->
+        <div id="Bio">
+            <h2>About Me</h2>
+            
+            <p>Sandy sells sea shells down by the sea shore</p>
+
+            <img src="https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters%3Aformat%28jpg%29/ht
+            tps%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F1198357446%2F0x0.jpg" alt="Tom Brady Throwing a football for the New England Patriots"
+            style="width:500px">
+
+
+        
+
+        </div>
+
+        <div id="School">
+            <h2>Schooling</h2>
+            <ol>
+                <li>School 1</li>
+                <li>School 2</li>
+                <li>School 3</li>
+            </ol>
+
+
+        </div>
+
+        <div id="Hobbies">
+            <h2>Hobbies</h2>
+            <ol>
+                <li>Hobby 1</li>
+                <li>Hobby 2</li>
+                <li>Hobby 3</li>
+
+            </ol>
+
+        </div>
+
+       <!--Footer-->
+
+        <div id="Footer">
+
+            <a href="#Wrapper">Back to Top</a>
+        
+            <p>&copy; 2022 | A Runk | SE111.32</p>
+       
+        </div>
+      
+    
+    </div> 
+</body>
+</html>
