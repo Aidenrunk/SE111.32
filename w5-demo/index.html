@@ -4,11 +4,168 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>W5D1-Demo</title>
 </head>
 <body>
+    <h1>Basic Form Demo</h1>
+
+    <h2>Form Without Table</h2>
+    <!--Text fields for manuel entry by user, value becomes what user types into box before submitting -->
+
+
+    <form>
+        <!--lables are used to match with input elements-->
+    
+        <!--For attribute connects labels with input-->
+        <label for="Firstname">First Name:</label>
+        <input type = "Text" name="Firstname">
+
+        <br>
+
+        <label for="Lastname">Last Name:</label>
+        <input type = "Text" name="Lastname">
+
+
+        <br>
+
+        <label for="email">Email:</label>
+        <input type="text" name="email" id="email">
+
+        <br>
+        <br>
+
+        <input type="Submit" name="Sumbit">
+
+
+
+
+    </form>
 
     
     
+    
+    
+    <h2>Form With Table</h2>
+
+
+    <form>
+        <!--Form comes first-->
+        <table>
+            <!--thead can be used for columm headers-->
+            <!--tbody is required for a table-->
+
+            <tbody>
+                <tr>    <!--table row: should include <td> for every colum-->
+                    <td><!--first data cell (left)-->
+                        <label for="firstname">First Name:</label>
+                    </td>
+
+                    <td><!--second table row (right)-->
+                        <input type="text" id="firstname" name="firstname" maxlength="50">
+                    </td>
+            
+                </tr>
+                <tr>
+                    <td>
+                        <label for="lastname">Last Name:</label>
+                    </td>
+
+                    <td>
+                        <input type="text" id="lastname" name="lastname" maxlength="50">
+                    </td>   
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email">Email:</label>
+                    </td>
+                    <td>
+                        <input type="text" id="email" name="email" maxlength="50">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="comments">Comments:</label>
+                    </td>
+
+                    <td>
+                        <textarea name="comments" rows="10" cols="10" placeholder="Your Comments Here:"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="faveColor">Pick your Favorite Color</label>
+
+                    </td>
+                    <td>
+                        <select name="faveColor">
+                            <option value="red">Red</option>
+                            <option value="orange">Orange</option>
+                            <option value="green">Green</option>
+                            <option value="blue">Blue</option>
+                            <option value="purple">Purple</option>
+
+
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="study">Program of Study</label>
+
+                    </td>
+
+                    <td>
+                        <input type="radio" name="study" value="SE">Software Engineering<br>
+                        <input type="radio" name="study" value="CYB">Cybersecurity<br>
+                        <input type="radio" name="study" value="NE">Network Engineering<br>
+                        <input type="radio" name="study" value="WD">Web Development<br>
+
+                    </td>
+
+                </tr>
+
+            
+
+            <tr>
+                <td>
+                    <label for="vehicle">Select your Vehicle</label>
+                </td>
+                <td>
+                    <input type="checkbox" name="vehicle" value="car">Car
+                    <input type="checkbox" name="vehicle" value="ship">Ship
+                    <input type="checkbox" name="vehicle" value="horse">Horse
+        
+                </td>
+                <td>
+
+                </td>
+
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="date">Date</label>
+
+                </td>
+
+                <td>
+                    <input type="date" name="date">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+
+                    <input type="Submit" name="Submit">
+
+                </td>
+
+            </tr>
+            </tbody>
+
+        </table>
+
+    </form>
 </body>
 </html>
