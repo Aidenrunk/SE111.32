@@ -10,7 +10,7 @@
     
     <link type="text/css" rel="stylesheet" href="style.css">
 
-    <title>Week 5 | Tables and Forms</title>
+    <title>Week 5 | Birthday Form</title>
 </head>
 <body>
     <!--Build your Table and Form here-->
@@ -91,6 +91,10 @@
                 <td>
                      <label for="guests">Guests</label>
                 </td>
+
+                <td>
+                    <input type="text" id="time" name="time" required placeholder="Time">
+                </td>
             </tr>
             <tr>
                 <td>
@@ -101,17 +105,41 @@
                 <td>
                      <label for="size">Size</label>
                 </td>
+
+                <td>
+                    <input type="radio" name="size" value="sm">Small
+                    <input type="radio" name="size" value="med">Medium
+                    <input type="radio" name="size" value="lg">Large
+                </td>
             </tr>
     
             <tr>
                 <td>
                      <label for="drinks">Drinks</label>
                 </td>
+
+                <td>
+                    <input type="checkbox" name="drink1" value="coke">Coke<br>
+                    <input type="checkbox" name="drink2" value="sprite">Sprite<br>
+                    <input type="checkbox" name="drink3" value="Fruit Punch">Fruit Punch<br>
+                    <input type="checkbox" name="drink4" value="Lemonade">Lemonade<br>
+                    <input type="checkbox" name="drink5" value="Iced Tea">Iced Tea<br>
+                </td>
             </tr>
+
     
             <tr>
                 <td>
                      <label for="cake">Cake</label>
+                </td>
+                <td>
+                    <select name="cake">
+                        <option value="chocolate">Chocolate</option>
+                        <option value="vanilla">Vanilla</option>
+                        <option value="own">Ill bring my own</option>
+
+
+                    </select>
                 </td>
             </tr>
             <tr>
@@ -124,11 +152,28 @@
                 <td>
                      <label for="color">Color</label>
                 </td>
+                
+                <td>
+                    <h4>Pick a color scheme for the party.</h4>
+                    <input type="color" name="colors" value="color">Black<br>
+                </td>
             </tr>
     
             <tr>
                 <td>
                      <label for="comments">Comments</label>
+                </td>
+
+                <td>
+                    <textarea name="comments" rows="5" cols="20" placeholder="Add any additional comments here:"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    
+                </td>
+                <td>
+                    <input type="Submit" name="Submit">
                 </td>
             </tr>
     
