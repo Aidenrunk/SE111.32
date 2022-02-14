@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W6 Demo</title>
+    
+    <meta name ="author" content ="Aiden Runk">
+    <meta name="description" content="W6 Demo">
+
+</head>
+<body>
+    <h1>W6 Demo | Intro to Javascript</h1>
+
+
+    <script>
+        //Everything in script tag must be written in javascript
+
+        /*I want to split some comments
+        can do this
+       (block commenting)*/
+
+       //create variable --> var
+       var num1 // decleration only
+       num1 = 7
+
+       //combine decleration and assignment onto one line
+       var num2 = 10 
+       var num3 = 7
+        
+        //vars of num1,num2,num3 cannot be used until theyve been assigned value.
+
+        var sum = num2 + num3
+
+        //DISPLAY DATA TO BROWSER -- user can see info
+        //alert() created a pop-up in the browser page to display data - similar to print()
+        //`` denotes a literal string --> combines formattiing from format in python --> hold var names inside of ${VAR}
+
+        alert(`The Sum is: \n\n${sum}`)
+
+        //DISPLAY TO THE CONSOLE
+        //for java script, the console is built into the dev tools
+
+        /*ACCESSING DEV TOOLS
+            -F12 or right click inspect
+            -Choose console in menu
+            -Refresh the page
+        */
+
+       // console.log(`The sum is: ${sum}`)
+        //console.log is mainly used for testing
+        //not a physical display in page, only in dev tools.
+
+        //"INPUT" gaining data from browser pop-up where user enters info (not from a form)
+
+      //  prompt(`Enter your name: `)//Essentially input() in python
+        //Use to gain data that we can use
+       // console.log(`We have passed the prompt()`)
+        var name = prompt(`Enter your name: `)
+        
+
+        console.log(name)
+
+        alert(`Hello There ${name}`)
+
+        //All data from the prompt() is a string
+
+        var lastname = prompt(`Enter your last name`)
+
+        var fullname = name + " " + lastname
+
+        console.log(fullname)
+
+        var num = prompt(`Enter a number to be multiplied by 7: `)
+
+        var multi = num * 7
+
+        console.log(multi)
+
+        //for reference: Number()
+        //num = Number(num) --> ensures num is a number
+        console.log(`The Multi value is: ${multi}`)
+
+
+        alert(`${num} * 7 = ${multi.toFixed(2)}`)
+
+    </script>
+
+</body>
+</html>
