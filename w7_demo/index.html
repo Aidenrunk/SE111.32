@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    <h1>W7D2 - Javascript Selector & Event Demo</h1>
+    <h1>W7D2 Demo</h1>
 
     <form>
 
@@ -97,36 +97,38 @@
     <p id="you">
         Click!
     </p>
-
     <input type="button" id="submit" value="COOL STUFF!">
 
     <br><br><br><br><br>
     <p>end</p>
+
     <!--IN-DOCUMENT JAVASCRIPT BELOW-->
     <script>
-
         //selecting the body element
         var body = document.querySelector(`body`)
+        console.log(body)
+        console.dir(body)
+        var p = document.querySelector(`p`)
+        console.log(p)
 
-        //creating a new variable to hold new HTML elements
+        //creating a new variable to hold HTML data
         var newP = ``
         newP += `<p>`
-        newP += `hello world! this content was added to the page using Javascript!`
-        newP += `</p>`
-        
-        //adding new HTML element info to the end of the body element
+        newP += `Hello World! this content was added to the page using Javascript!`
+        //innerHTML of new <p> tag
+        newP += `</p>` //close of the tag
+        console.log(newP)
+        //add the new element to the end of the body element, see below
         body.innerHTML += newP
-
         //adding an event listener to the #enter-button at end of mini form
         document.querySelector(`#enter-button`).addEventListener(`click`, alertInfo)
 
        //event specific function: requires the 'e' parameter to hold event data
-        function alertInfo(e) {
-
+        function alertInfo(e) 
+        {
             //local variables: their value only exists inside of alertInfo()
             var fname = document.querySelector(`#first`).value
             var lname = document.querySelector(`#last`).value
-
             var age = document.querySelector(`#age`).value
 
             //numbers from input need to be cast!
@@ -137,37 +139,39 @@
 
             var full = fname + ` ` + lname
 
+            console.log(full)
             alert(`Hi there, ${full}!`)
-
+            
+            //add the user's name to the #hello
             var hello = document.querySelector(`#hello`)
 
             //change the hello (#hello element in html) to say hi to the user
 
             hello.innerHTML += ` ${full}!`
 
-            //store HTMl element #info into the var info to use
-            var info = document.querySelector(`#info`)
 
-            //calculate age in dog years
+            //calculate age in in dog years and cat years
             var dog_age = (age * 7).toFixed(1) 
+            var cat_age = (age * 4).toFixed(1)
 
-            var cat_age = (age * 4).toFixed(1) 
-
-            console.log(`Dog Age: ${dog_age}\nCat Age: ${cat_age}`)
+            console.log(`Age in Dog Years: ${dog_age}\nAge in Cat Years: ${cat_age}`)
 
             //add the new age data to the #info element
 
+            //store HTMl element #info into the var info to use
+            var info = document.querySelector(`#info`)
+            info.innerHTML += `<br>Here is some info on the age you entered :]
+             <br><br>YOUR AGE: ${age}<br><br>Dog Age: ${dog_age}<br>Cat Age: ${cat_age}`
 
-            info.innerHTML += `<br>Here is some info on the age you entered :] <br><br>YOUR AGE: ${age}<br><br>Dog Age: ${dog_age}<br>Cat Age: ${cat_age}`
+        }//alertInfo() CLOSE
 
-
-        }//alertInfo() CLOSE 
-
-        //global variables - can be used in any functions after this
+        //global variables - accesable everywhere that has a script tage, so long as they are already declared and defined
         var me = document.querySelector(`#me`)
         var you = document.querySelector(`#you`)
 
         console.log(me)
+        console.log(me.id)
+        console.log(me.innerHTML)
 
         //adding event listeners to non-button elements
         me.addEventListener(`click`, clicked)
@@ -176,7 +180,9 @@
         {
 
             me.style.color = "red"
-            console.log(`clicked reached`)
+            me.style.fontSize = `36px` 
+            console.log(`redclicked reached`)
+            me.innerHTML = `CLICKED`
             
         }
 
@@ -186,19 +192,20 @@
         {
             you.style.color = "green"
             console.log(`greenclick reached`)
+            you.style.fontFamily = `Tahoma`
+            you.innerHTML = `CLICKED`
         }
 
         //selecting another button on the page
         var button = document.querySelector(`#submit`)
 
-        //demoing an anonymous function
+        //anonymous function used below
         button.addEventListener(`click`, function(event) 
         {
             //checking out the event parameter 
             console.log(event)
-        }//anonymouse function close
-        )
+        }//anonymous function close
+        )//addEventListener close
     </script>
-    
 </body>
 </html>
