@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 8 Day 1</title>
+</head>
+<body>
+    <h1>Week 8 Day 1 Demo</h1>
+
+    <div id="output"><!--This si where info will be written from JS to the HTML page-->
+
+    </div>
+    
+    <script>
+        var fname = `Aiden`
+        var lname = `Runk`
+        var age = `18`
+        var town = `Burrillville`
+
+
+        var people = [//{} indicates an array
+            `Katie`,
+            `Jay`,
+            `Brett`,
+            `Tyler`,
+            `Aiden`,
+            `Brandon`,
+            `John`,
+        ]
+        
+        console.log(people)
+
+        var colors = [
+            `Grey`,
+            `Red`,
+            `Blue`,
+            `Green`,
+            `Purple`,
+            `Blue`,
+        ]
+        for(let index = 0; index < people.length; index++)
+        {
+
+        }
+
+        //associative arrays - use strings instead of intergers
+
+        var persons = []
+        persons[`teacher`] = `Katie`
+        persons[`firstRow1`] = `John`
+        persons[`firstRow2`] = `Richard`
+
+        var person1 = {
+            First: `Aiden`,
+            Last: `Runk`,
+            age: 18,
+            height: 72,
+            hasPets: true,
+            classes: [],
+            pets: {}
+
+        }
+        var person2 = {
+            First: `Tyler`,
+            Last: `Kraus`,
+            age: 19,
+            height: 69,
+            hasPets: false,
+            classes: [],
+            pets: {}
+
+        }
+
+
+        var cars = [
+        [`MAKES`, `Toyota` , `Chevy` , `Ford` , `Audi`]
+        [`MODELS` , `Camry`, `Cavalier` , `F150` , `R8`]
+        [`YEARS` , `1998` , `2006` , `2018` , `2016`],
+        ]
+
+        for(let key in person1)
+        {
+            console.log(key, typeof key)
+            console.log(`${key.toUpperCase()}: ${person1[key]}`)
+        }
+        console.log(person1)
+
+        var humans = [
+
+            person1,
+            person2
+        ]
+
+
+        var person3 = {
+            First: `Jack`,
+            Last: `Truchon`,
+            age: 12,
+            height: 14,
+            hasPets: false,
+            classes: [],
+            pets: {}
+
+        }
+
+        humans.push(person3)
+
+        //to view array contents, loop through it
+
+        for(let i = 0; i < humans.length; i++)
+        {//this outer standard for loops loops through values stored in the array
+            console.log(`Info for ${humans[1]}--------`)
+        }
+
+        for(let key in humans[i])
+        {
+            console.log(`${key.toUpperCase()}: ${humans[i][key]}`)
+        }
+        console.log(`----------------------------`)
+
+        var output = ``
+
+        for(let i=0; i< humans.length; i++)
+        {
+            //add a header for each person
+            output += `<h3 id ="index-${i}">Person #${i + 1}
+            </h3>`
+            for(let key in humans[i])
+            {
+                output += `<p><b>${key.toUpperCase()}:</b> ${humans[i][key]}</p>`
+            }
+
+            console.log(output)
+
+            output += `<hr>` 
+
+            function hi()
+            {
+                alert(`Hi there, ${human[i].first} ${humans[i].last}, you have been added to the output`)
+            }
+        }
+
+        hi()
+
+        document.querySelector(`#output`).innerHTML = output
+        
+        
+
+
+
+
+    </script>
+</body>
+</html>
