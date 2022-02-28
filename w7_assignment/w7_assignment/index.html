@@ -162,7 +162,7 @@
             //edit the innerHTML of the #check element (now the 'check' js var) to hold a literal string with the following values: gross pay, tax amount, net pay. All three values should be rounded to the second decimal place.  Use <br> to break onto a new line for each value
             
             info.innerHTML += `<br>Here is some info on the stuff you entered :]
-                <br><br>Your Name: ${full}<br><br>Gross Pay: ${gross}<br>Net Pay: ${net}<br> Taxes paid: ${taxAmount.toFixed(2)}`
+                <br><br>Your Name: ${full}<br><br>Gross Pay: ${gross.toFixed(2)}<br>Net Pay: ${net.toFixed(2)}<br> Taxes paid: ${taxAmount.toFixed(2)}`
             //add a 'click' event listener to the #submit HTML element (HINT: this is the first step in the <script> ) 
             var button= document.querySelector(`#submit`)
                        
